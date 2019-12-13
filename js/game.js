@@ -19,18 +19,19 @@ function atualizaMostrador(){
 }
 
 function inicializarEspacos(){
-	var espacos = document.getElementsByClassName('espaco');
-	for (var i = 0; i < espacos.lenght; i++) {
-		espacos[i].addEventListener("click", function(){
+	var espacos = document.getElementsByClassName("espaco");
+	for (var i = 0; i < espacos.length; i++) {
+		espacos[i].addEventListener('click', function(){
+
 			if (gameOver) {return;}
-			if (this.getElementsByTagName("img").lenght == 0) {
+
+			if (this.getElementsByTagName("img").length == 0) {
 				if (playTime == player1) {
-					this.innerHTML = "<img src='img/x.png'>";
-					this.setAttribute("jogada", player1);
-					playTime = player2;
-					console.log(playTime);
+						this.innerHTML = "<img src='img/x.png' border='0'>";
+						this.setAttribute("jogada", player1);
+						playTime = player2;
 				}else{
-					this.innerHTML = "<img src='img/o.png'>";
+					this.innerHTML = "<img src='img/o.png' border='0'>";
 					this.setAttribute("jogada", player2);
 					playTime = player1;
 				}
