@@ -8,7 +8,8 @@ inicializarEspacos();
 
 function atualizaMostrador(){
 	if (gameOver) {return;}
-	if (player1 == player1) {
+
+	if (playTime == player1) {
 		var player = document.querySelectorAll("div#mostrador img")[0];
 		player.setAttribute("src", "img/x.png");
 	}else{
@@ -18,7 +19,7 @@ function atualizaMostrador(){
 }
 
 function inicializarEspacos(){
-	var espacos = document.getElementsByClassName("espaco");
+	var espacos = document.getElementsByClassName('espaco');
 	for (var i = 0; i < espacos.lenght; i++) {
 		espacos[i].addEventListener("click", function(){
 			if (gameOver) {return;}
@@ -27,6 +28,7 @@ function inicializarEspacos(){
 					this.innerHTML = "<img src='img/x.png'>";
 					this.setAttribute("jogada", player1);
 					playTime = player2;
+					console.log(playTime);
 				}else{
 					this.innerHTML = "<img src='img/o.png'>";
 					this.setAttribute("jogada", player2);
