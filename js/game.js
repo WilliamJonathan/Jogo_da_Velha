@@ -77,8 +77,7 @@ async function verificarVencedor(){
 
 		alert("O ganhador foi: '"+vencedor+"'");
 		window.location.reload();
-	}
-		
+	}		
 }
 
 function sleep(ms){
