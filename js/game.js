@@ -42,7 +42,7 @@ function inicializarEspacos(){
 	}
 }
 
-function verificarVencedor(){
+async function verificarVencedor(){
 	var a1 = document.getElementById("a1").getAttribute("jogada");
 	var a2 = document.getElementById("a2").getAttribute("jogada");
 	var a3 = document.getElementById("a3").getAttribute("jogada");
@@ -69,10 +69,19 @@ function verificarVencedor(){
 		(c3 == a3 && c3 == b3 && c3 != "")){
 		vencedor = c3;
 	}
-	
+
 	if (vencedor != "") {
 		gameOver = true;
-		alert("O ganhador foi: '"+vencedor+"'")
+
+		await sleep(50);
+
+		alert("O ganhador foi: '"+vencedor+"'");
+		window.location.reload();
 	}
 		
+}
+
+function sleep(ms){
+
+	return new Promise(resolve => setTimeout(resolve, ms));
 }
