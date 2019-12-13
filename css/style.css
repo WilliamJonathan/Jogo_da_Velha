@@ -7,9 +7,11 @@
 
 .espaco{
 	width: 80px;
-	height: 80px;
+	height: 60px;/*height80px - padding-top20px*/
 	border: 2px solid #000;
 	float: left;
+	text-align: center;
+	padding-top: 20px;
 }
 
 .tabuleiro{
